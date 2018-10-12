@@ -265,7 +265,7 @@ func WtmpMetrics() (L []*common.Metric) {
 			var m *common.Metric
 			m.Name = "kernel.user.login"
 			m.Value = 1
-			m.Timestamp = tmp.Time
+			m.Timestamp = tmp.Time.Unix()
 			m.Tags = map[string]string{"user": tmp.User, "host": tmp.Host}
 			L = append(L, m)
 		}
