@@ -270,4 +270,5 @@ func WtmpMetrics() (L []*common.Metric) {
 			L = append(L, m)
 		}
 	}
+	return
 }
